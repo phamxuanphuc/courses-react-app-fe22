@@ -1,0 +1,16 @@
+@import "./Helpers/variable";
+@import "./Helpers/mixin";
+@import "./Helpers/extend";
+
+// Theme styles
+@import "./Theme/bootstrap.min.css";
+// @import "./Theme/font-awesome.min.css";
+// @import "./Theme/owl.carousel.css";
+@import "./Theme/style.css";
+
+// Styles components
+@import "../components/Header/Header.styles.scss";
+@import "../components/Footer/Fooer.styles.scss";
+
+// Styles pages
+@import "../pages/clients/HomePage/Home.styles.scss";
