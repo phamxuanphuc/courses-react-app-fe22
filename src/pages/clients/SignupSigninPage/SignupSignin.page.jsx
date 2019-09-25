@@ -1,15 +1,18 @@
 import React from "react";
-
+import SignupBg from "../../../assets/images/signup-bg.jpg";
 const SignupSignin = () => (
   <div className="signup-signin">
     <section className="signup-section spad">
-      <div className="signup-bg set-bg" data-setbg="img/signup-bg.jpg" />
+      <div
+        className="signup-bg set-bg"
+        style={{ backgroundImage: `url(${SignupBg})` }}
+      />
       <div className="container-fluid">
         <div className="row">
           <div className="col-lg-6">
             <div className="signup-warp">
               <div className="section-title text-white text-left">
-                <h2>Sign up to became a teacher</h2>
+                <h2>Sign up to became a master</h2>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
                   malesuada lorem maximus mauris scelerisque, at rutrum nulla
@@ -17,16 +20,19 @@ const SignupSignin = () => (
                   finibus.
                 </p>
               </div>
-              {/* signup form */}
+
               <form className="signup-form">
                 <input type="text" placeholder="Your Name" />
                 <input type="text" placeholder="Your E-mail" />
                 <input type="text" placeholder="Your Phone" />
-                <label htmlFor="v-upload" className="file-up-btn">
-                  Upload Course
-                </label>
-                <input type="file" id="v-upload" />
-                <button className="site-btn">Search Couse</button>
+                <div className="btn-action">
+                  <button type="submit" className="site-btn file-up-btn">
+                    Sign Up
+                  </button>
+                  <button type="button" className="site-btn">
+                    Register
+                  </button>
+                </div>
               </form>
             </div>
           </div>
