@@ -1,5 +1,6 @@
 import React from "react";
 import SignupBg from "../../../assets/images/signup-bg.jpg";
+
 const SignupSignin = () => (
   <div className="signup-signin">
     <section className="signup-section spad">
@@ -26,8 +27,8 @@ const SignupSignin = () => (
                 <input type="text" placeholder="Your E-mail" />
                 <input type="text" placeholder="Your Phone" />
                 <div className="btn-action">
-                  <button type="submit" className="site-btn file-up-btn">
-                    Sign Up
+                  <button type="button" className="site-btn login-btn">
+                    Register
                   </button>
                   <button type="button" className="site-btn">
                     Register
