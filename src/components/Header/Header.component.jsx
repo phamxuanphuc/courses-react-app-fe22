@@ -1,4 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom"
+import Logo from "../../assets/images/logo.png"
+import $ from 'jquery';
 
 const Header = () => (
  <header className="header-section">
@@ -6,7 +9,7 @@ const Header = () => (
     <div className="row">
       <div className="col-lg-3 col-md-3">
         <div className="site-logo">
-          <img src="img/logo.png" alt />
+          <img src={Logo} alt />
         </div>
         <div className="nav-switch">
           <i className="fa fa-bars" />
@@ -16,9 +19,9 @@ const Header = () => (
         <a href className="site-btn header-btn">Login</a>
         <nav className="main-menu">
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><Link to="/">Home</Link></li>
             <li><a href="#">About us</a></li>
-            <li><a href="courses.html">Courses</a></li>
+            <li><Link to="/courses">Courses</Link></li>
             <li><a href="blog.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
@@ -27,6 +30,15 @@ const Header = () => (
     </div>
   </div>
 </header>
-
 );
+
+// (function($) {
+	$('.nav-switch').on('click', function(event) {
+		$('.main-menu').slideToggle(400);
+		event.preventDefault();
+	});
+// })(jQuery);
+
+
+
 export default Header;

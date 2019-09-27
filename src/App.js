@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 
 //Routing
 import { Switch, Route } from "react-router-dom";
@@ -13,18 +13,28 @@ import SignupSignin from "./pages/clients/SignupSigninPage/SignupSignin.page";
 import Header from "./components/Header/Header.component";
 import Footer from "./components/Footer/Footer.component";
 
-function App() {
-  return (
-    <div className='app-main'>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/courses" component={CoursesPage} />
-        <Route path="/sign-in" component={SignupSignin} />
-      </Switch>
-      <Footer/>
-    </div>
-  );
+import { connect } from 'react-redux';
+import { getCoursesFromApi } from './redux/reducers/courses/courses.action';
+
+class App extends React.Component {
+
+  componentDidMount() {
+    this.props.getCoursesFromApi();
+  }
+
+  render() {
+    return (
+      <div className='app-main'>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route path="/courses" component={CoursesPage} />
+          <Route path="/sign-in" component={SignupSignin} />
+        </Switch>
+        <Footer />
+      </div>
+    );
+  }
 }
 
-export default App;
+export default connect(null, { getCoursesFromApi })(App);
