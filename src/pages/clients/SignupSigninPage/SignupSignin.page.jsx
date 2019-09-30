@@ -27,8 +27,8 @@ const SignupSignin = () => (
                 <input type="text" placeholder="Your E-mail" />
                 <input type="text" placeholder="Your Phone" />
                 <div className="btn-action">
-                  <button type="button" className="site-btn login-btn">
-                    Register
+                  <button type="submit" className="site-btn login-btn mr-2">
+                    Sign up
                   </button>
                   <button type="button" className="site-btn">
                     Register
