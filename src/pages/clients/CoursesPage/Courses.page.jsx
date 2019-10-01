@@ -52,7 +52,7 @@ const Courses = () => (
           </div>
         </div>
         <div className="row">
-          <div className="col-lg-10 offset-lg-1 course-list mt-5">
+          <div className="col-lg-10 offset-lg-1 course-list mt-4">
             <div className="cl-item">
               <h4>Course Description</h4>
               <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. </p>
