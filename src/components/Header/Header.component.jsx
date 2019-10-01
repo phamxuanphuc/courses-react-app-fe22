@@ -9,18 +9,18 @@ const Header = () => (
     <div className="row">
       <div className="col-lg-3 col-md-3">
         <div className="site-logo">
-          <img src={Logo} alt />
+          <img src={Logo} alt="logo" />
         </div>
-        <div className="nav-switch">
+        <div className="nav-switch" onClick={toggleBar}>
           <i className="fa fa-bars" />
         </div>
       </div>
       <div className="col-lg-9 col-md-9">
-        <a href className="site-btn header-btn">Login</a>
+        <a href="#abc" className="site-btn header-btn">Login</a>
         <nav className="main-menu">
           <ul>
             <li><Link to="/">Home</Link></li>
-            <li><a href="#">About us</a></li>
+            <li><a href="#abc">About us</a></li>
             <li><Link to="/courses">Courses</Link></li>
             <li><a href="blog.html">News</a></li>
             <li><a href="contact.html">Contact</a></li>
@@ -32,13 +32,9 @@ const Header = () => (
 </header>
 );
 
-// (function($) {
-	$('.nav-switch').on('click', function(event) {
-		$('.main-menu').slideToggle(400);
-		event.preventDefault();
-	});
-// })(jQuery);
-
-
+const toggleBar = () => {
+  $('.main-menu').slideToggle(400);
+  console.log("test")
+}
 
 export default Header;

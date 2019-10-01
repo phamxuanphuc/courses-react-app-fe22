@@ -11,6 +11,25 @@ export const getCoursesFromApi = () => {
                     payload: data.data,
                 })
             })
-            .catch(err => {console.log(err)})
+            .catch(err => { })
     }
+}
+
+export const cateloriesSelected = (catelories) => {
+    return ({
+        type: Types.CATELORIES_SELECTED,
+        payload: catelories
+    })
+}
+
+export const getCateloriesFromApi = (callBack) => {
+    return(dispatch) => {
+        axios
+        .get("http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc")
+        .then((data) => {
+            callBack(data.data);
+        })
+        .catch(err => {console.log(err)})
+    }
+
 }

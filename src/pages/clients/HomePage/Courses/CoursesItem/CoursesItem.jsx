@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-
-import courses1 from "../../../../../assets/images/courses/1.jpg";
 import authors1 from "../../../../../assets/images/authors/1.jpg";
 
 class CoursesItem extends Component {

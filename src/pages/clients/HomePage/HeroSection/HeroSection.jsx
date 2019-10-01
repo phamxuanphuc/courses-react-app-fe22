@@ -1,6 +1,5 @@
 import React from "react"
 import CarouselBackGroundImg from "../../../../assets/images/bg.jpg"
-import SearchSource from "../SearchCourses/SearchCourses";
 
 const HeroSection = () => (
     <section className="hero-section set-bg" style={{ backgroundImage: `url(${CarouselBackGroundImg})` }}>
@@ -19,7 +18,6 @@ const HeroSection = () => (
                 </div>
             </div>
         </div>
-        <SearchSource />
     </section>
 );
 
