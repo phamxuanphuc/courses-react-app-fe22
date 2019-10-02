@@ -1,6 +1,7 @@
 @import "./Helpers/variable";
 @import "./Helpers/mixin";
 @import "./Helpers/extend";
+@import "./Helpers/placeholders";
 
 // Theme styles
 @import "./Theme/bootstrap.min.css";
@@ -11,7 +12,10 @@
 // Styles components
 @import "../components/Header/Header.styles.scss";
 @import "../components/Footer/Fooer.styles.scss";
-
+@import "../components/FormInput/FormInput.styles.scss";
+@import "../components/Button/Button.styles.scss";
+@import "../components/login/Login.styles.scss";
+@import "../components/register/Register.styles.scss";
 // Styles pages
 @import "../pages/clients/HomePage/Home.styles.scss";
-@import "../pages/clients/SignupSigninPage/SignupSignin.styles.scss"
+@import "../pages/login-register/LoginRegister.styles.scss";

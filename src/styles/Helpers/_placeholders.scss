@@ -1,0 +1,58 @@
+%absolute-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+%flex-center{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%text-headline {
+  font-size: 40pt;
+  font-weight: bold;
+  font-family: 'Literata', serif;
+
+}
+%text-title {
+  font-size: 30pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+%text-subheader {
+  font-size: 20pt;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+%text-quote {
+  font-size: 20pt;
+  font-family: 'Literata', serif;
+  font-style: italic;
+}
+%text-large-body {
+  font-size: 14pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}
+%text-body{
+  font-size: 14pt;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+%text-secondary-body{
+  font-size: 12pt;
+  font-weight: normal;
+  font-family: 'Roboto', sans-serif;
+}
+%placeholder{
+  font-size: 12pt;
+  font-style: italic;
+  font-family: 'Roboto', sans-serif;
+}
+%text-button{
+  font-size: 10pt;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+}

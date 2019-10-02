@@ -1,0 +1,13 @@
+.register {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 999;
+    .button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  
