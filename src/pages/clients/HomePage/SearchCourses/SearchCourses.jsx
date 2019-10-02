@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 class SearchCourses extends Component {
 
@@ -16,7 +18,22 @@ class SearchCourses extends Component {
     })
   }
 
+  onSubmit = () => {
+    this.props.history.push(`/courses/${this.state.coursesName}`)
+  }
+
   render() {
+    // render courses option
+    const coursesOption = this.props.courses.map((item, index) => {
+      return <option key={index} value={item.maKhoaHoc}>{item.tenKhoaHoc}</option>
+    })
+
+    // render catelories
+    const catelories = this.props.catelories.map((item, index) => {
+      return <option key={index} value={item.tenDanhMuc}>{item.tenDanhMuc}</option>
+    })
+
+
     return (
       <section className="search-section ss-other-page">
         <div className="container">
@@ -24,16 +41,22 @@ class SearchCourses extends Component {
             <div className="section-title text-white">
               <h2><span>Search your course</span></h2>
             </div>
-            <div className="row">
-              <div className="col-lg-10 offset-lg-1">
-                {/* search form */}
-                <form className="course-search-form">
-                  <input type="text" placeholder="Course" value={this.state.coursesName} onChange={this.onChange} />
-                  <input type="text" className="last-m" placeholder="Category" value={this.state.catelories} onChange={this.onChange} />
-                  <button className="site-btn btn-dark">Search Couse</button>
-                </form>
+            {/* search form */}
+            <form className="course-search-form row">
+              <div className="col-md-5">
+                <select className="site-btn mySelect" type="text" placeholder="Course" value={this.state.coursesName} onChange={this.onChange} name="coursesName">
+                  {coursesOption}
+                </select>
               </div>
-            </div>
+              <div className="col-md-5">
+                <select className="site-btn mySelect" type="text" placeholder="Catelories" value={this.state.catelories} onChange={this.onChange} name="catelories">
+                  {catelories}
+                </select>
+              </div>
+              <div className="col-md-2">
+                <button onClick={this.onSubmit} className="site-btn btn-dark">Search Couse</button>
+              </div>
+            </form>
           </div>
         </div>
       </section>
@@ -42,4 +65,11 @@ class SearchCourses extends Component {
   }
 }
 
-export default SearchCourses;
+const mapStateToProps = (state) => {
+  return {
+    courses: state.courses,
+    catelories: state.catelories,
+  }
+}
+
+export default withRouter(connect(mapStateToProps)(SearchCourses));

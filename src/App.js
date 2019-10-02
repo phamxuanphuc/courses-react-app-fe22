@@ -28,7 +28,7 @@ class App extends React.Component {
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route path="/courses" component={CoursesPage} />
+          <Route path="/courses:maKhoaHoc" component={CoursesPage} />
           <Route path="/sign-in" component={SignupSignin} />
         </Switch>
         <Footer />

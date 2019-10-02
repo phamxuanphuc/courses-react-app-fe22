@@ -22,12 +22,15 @@ export const cateloriesSelected = (catelories) => {
     })
 }
 
-export const getCateloriesFromApi = (callBack) => {
+export const getCateloriesFromApi = () => {
     return(dispatch) => {
         axios
         .get("http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc")
         .then((data) => {
-            callBack(data.data);
+            dispatch({
+                type: Types.GET_CATELORIES_FROM_API,
+                payload: data.data,
+            })
         })
         .catch(err => {console.log(err)})
     }

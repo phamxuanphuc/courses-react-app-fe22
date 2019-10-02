@@ -16,13 +16,13 @@ class Courses extends Component {
     }
 
     componentDidMount() {
-        axios
-            .get("http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc")
-            .then((data) => {
-                this.setState({ catelories: data.data })
-            })
-            .catch(err => {})
-
+        // axios
+        //     .get("http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc")
+        //     .then((data) => {
+        //         this.setState({ catelories: data.data })
+        //     })
+        //     .catch(err => {})
+        this.props.getCateloriesFromApi();
     }
 
     componentDidUpdate() {
@@ -40,7 +40,7 @@ class Courses extends Component {
 
         // render catelories
 
-        const catelories = this.state.catelories.map((item, index) => {
+        const catelories = this.props.catelories.map((item, index) => {
             return <li key={index} id={item.maDanhMuc} className="control" data-filter={"." + item.maDanhMuc}>{item.tenDanhMuc}</li>
         })
 
@@ -70,6 +70,7 @@ const mapStateToprops = (state) => {
     return {
         courses: state.courses,
         cateloriesSelected: state.cateloriesSelected,
+        catelories: state.catelories,
     }
 }
 
