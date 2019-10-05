@@ -4,6 +4,9 @@ import React, { useState } from "react";
 import FormInput from "../FormInput/FormInput.components";
 import Button from "../Button/Button.component";
 
+// Router
+import { Link } from "react-router-dom";
+
 const RegisterComponent = () => {
   const [userNew, setUser] = useState({ email: "", password: "", name: "" });
   const { email, password, name } = userNew;
@@ -48,8 +51,11 @@ const RegisterComponent = () => {
             required={true}
           />
           <div className="button">
-            <Button signInGoogle={true}>
-              <span class="lnr lnr-arrow-left mr-1"></span>Go Home
+            <Button type='button' signInGoogle={true}>
+              <Link className=" mr-1 link" to="/home">
+                <i className="lnr lnr-arrow-left mr-1" />
+                <span> Go Home</span>
+              </Link>
             </Button>
 
             <Button type="submit">Sign Up</Button>

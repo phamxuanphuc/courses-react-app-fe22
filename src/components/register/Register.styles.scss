@@ -8,6 +8,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      &:hover{
+        i,span{
+          color: black;
+        }
+      }
+    }
+    i,span{
+      color: white;
     }
   }
   

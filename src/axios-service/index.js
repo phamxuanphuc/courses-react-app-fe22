@@ -28,9 +28,10 @@ class Service {
     return Promise.reject(error)
   }
 
-  // redirectTo = (document, path) => {
-  //   document.location = path
-  // }
+   redirectTo = (document, path) => {
+     document.location = path
+     console.log(path)
+   }
   
   get(url, callback) {
     return this.service.get(url).then(

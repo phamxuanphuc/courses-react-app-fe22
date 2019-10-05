@@ -16,7 +16,7 @@ const Header = () => (
         </div>
       </div>
       <div className="col-lg-9 col-md-9">
-        <a href="#abc" className="site-btn header-btn">Login</a>
+        <Link to="/login" className="site-btn header-btn">Login</Link>
         <nav className="main-menu">
           <ul>
             <li><Link to="/home">Home</Link></li>
