@@ -1,26 +1,21 @@
 import React from "react";
 
 //Routing
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router";
 
 // Page
 import HomePage from "./pages/clients/HomePage/Home.page";
-import CoursesPage from "./pages/clients/CoursesPage/Courses.page";
-// import LoginRegisterPage from "./pages/login-register/LoginRegister.page";
-// import DashboardPage from "./pages/admin/DashboardPage/dash-board.page";
-// import SignupSignin from "./pages/clients/SignupSigninPage/SignupSignin.page";
-import NewPage from "./pages/clients/New/New";
+import LoginRegisterPage from "./pages/login-register/LoginRegister.page";
+import DashboardPage from "./pages/admin/DashboardPage/dash-board.page";
 
-//Components
-import Header from "./components/Header/Header.component";
-import Footer from "./components/Footer/Footer.component";
+
 // NewPage
 import { connect } from "react-redux";
 import {
   getCoursesFromApi,
   getCateloriesFromApi
 } from "./redux/reducers/courses/courses.action";
-import UserPage from "./pages/clients/UserPage/UserPage";
+
 
 
 
@@ -42,19 +37,12 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-main">
-        {/* <Switch>
-          <Route path="/admin" component={CoursesPage} />
-          <Route path="/login" component={LoginRegisterPage} />
-          <Route path="/dashboard" component={DashboardPage} /> */}
-          <Header />
-          <Switch>
-            <Route exact path="/" component={HomePage} />
-            <Route path="/courses" component={CoursesPage} />
-            <Route path="/new" component={NewPage} />
-            <Route path="/user/danlu" component={UserPage} />
-          </Switch>
-          <Footer />
-        {/* </Switch> */}
+        <Switch >
+          <Redirect from="/" to="/home" exact />
+          <Route path="/home" component={HomePage} />
+          <Route  path="/login" component={LoginRegisterPage} />
+          <Route  path="/dashboard" component={DashboardPage} />
+        </Switch>
       </div>
     );
   }
