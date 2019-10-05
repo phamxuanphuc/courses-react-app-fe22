@@ -1,14 +1,16 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/main.scss'
 
-
 // Redux
 import { Provider } from "react-redux";
 import store  from "./redux/store.redux";
+
+
 // Router
 import { BrowserRouter } from "react-router-dom";
 

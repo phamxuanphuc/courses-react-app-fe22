@@ -16,31 +16,31 @@ const Footer = () => (
           <div className="widget-item">
             <h4>Engeneering</h4>
             <ul>
-              <li><a href>Applied Studies</a></li>
-              <li><a href>Computer Engeneering</a></li>
-              <li><a href>Software Engeneering</a></li>
-              <li><a href>Informational Engeneering</a></li>
-              <li><a href>System Engeneering</a></li>
+              <li><a href="#abc">Applied Studies</a></li>
+              <li><a href="#abc">Computer Engeneering</a></li>
+              <li><a href="#abc">Software Engeneering</a></li>
+              <li><a href="#abc">Informational Engeneering</a></li>
+              <li><a href="#abc">System Engeneering</a></li>
             </ul>
           </div>
           <div className="widget-item">
             <h4>Graphic Design</h4>
             <ul>
-              <li><a href>Applied Studies</a></li>
-              <li><a href>Computer Engeneering</a></li>
-              <li><a href>Software Engeneering</a></li>
-              <li><a href>Informational Engeneering</a></li>
-              <li><a href>System Engeneering</a></li>
+              <li><a href="#abc">Applied Studies</a></li>
+              <li><a href="#abc">Computer Engeneering</a></li>
+              <li><a href="#abc">Software Engeneering</a></li>
+              <li><a href="#abc">Informational Engeneering</a></li>
+              <li><a href="#abc">System Engeneering</a></li>
             </ul>
           </div>
           <div className="widget-item">
             <h4>Development</h4>
             <ul>
-              <li><a href>Applied Studies</a></li>
-              <li><a href>Computer Engeneering</a></li>
-              <li><a href>Software Engeneering</a></li>
-              <li><a href>Informational Engeneering</a></li>
-              <li><a href>System Engeneering</a></li>
+              <li><a href="#abc">Applied Studies</a></li>
+              <li><a href="#abc">Computer Engeneering</a></li>
+              <li><a href="#abc">Software Engeneering</a></li>
+              <li><a href="#abc">Informational Engeneering</a></li>
+              <li><a href="#abc">System Engeneering</a></li>
             </ul>
           </div>
           <div className="widget-item">
@@ -57,13 +57,13 @@ const Footer = () => (
     <div className="footer-bottom">
       <div className="footer-warp">
         <ul className="footer-menu">
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Register</a></li>
-          <li><a href="#">Privacy</a></li>
+          <li><a href="#abc">Terms &amp; Conditions</a></li>
+          <li><a href="#abc">Register</a></li>
+          <li><a href="#abc">Privacy</a></li>
         </ul>
-        <div className="copyright">{/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}
-          Copyright © All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true" /> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-          {/* Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. */}</div>
+        <div className="copyright">
+          Copyright © All rights reserved | This template is made with <i className="fa fa-heart-o" aria-hidden="true" /> by <a href="https://colorlib.com" rel="noopener noreferrer" target="_blank">Colorlib</a>
+        </div>
       </div>
     </div>
   </footer>

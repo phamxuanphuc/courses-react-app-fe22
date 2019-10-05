@@ -1,6 +1,5 @@
-
-
 @import "./Helpers/variable";
+@import "./Base/reset";
 @import "./Helpers/mixin";
 @import "./Helpers/extend";
 @import "./Helpers/placeholders";
@@ -20,13 +19,19 @@
 @import "../components/top-navbar/top-navbar.styles.scss";
 @import "../components/left-sidebar/left-sidebar.styles.scss";
 
-
-
 // Styles pages
 @import "../pages/clients/HomePage/Home.styles.scss";
 @import "../pages/login-register/LoginRegister.styles.scss";
 @import "../pages/admin/DashboardPage/dash-board.styles.scss";
 
-
 @import "../components/main-content/main-content.styles.scss";
 @import "../components/main-content-user/main-content.styles.scss";
+@import "../pages/clients/HomePage/SearchCourses/SearchCourses.scss";
+@import "../pages/clients/HomePage/HeroSection/HeroSection.scss";
+@import "../pages/clients/HomePage/Courses/CoursesItem/CoursesItem.scss";
+@import "../pages/clients/HomePage/CoursesCatelories/CoursesCatelories.scss";
+@import "../pages/clients/HomePage/AboutUs/AboutUs.scss";
+@import "../pages/clients/UserPage/UserPage.scss";
+@import "../pages/clients/UserPage/MyCourses/MyCourses.scss";
+
+@import "../pages/clients/SignupSigninPage/SignupSignin.styles.scss";
