@@ -19,9 +19,11 @@ const SignIn = ({history}) => {
     }
     userApi.loginUser(userInfo).then(status=>{
       if(status===200){
-        history.push('/home')
+        history.push('/home');
+        setUser({ username: "", password: "" })
       }
     })
+
     
   };
   const handleChange = e => {
