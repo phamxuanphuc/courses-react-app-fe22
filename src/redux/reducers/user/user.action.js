@@ -7,13 +7,16 @@ export const setCurrentUser = user => ({
   payload: user
 });
 
-export const getInforUserFromApi = userAccont => {
+export const getInforUserFromApi = (userAccont, token, callBack) => {
+  let config = {
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  }
   axios
-    .get(
-      `http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/TimKiemNguoiDung?MaNhom=GP01&tuKhoa=${userAccont}`
-    )
+    .post(`http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/ThongTinTaiKhoan`, {'taiKhoan': userAccont}, config )
     .then(data => {
-      console.log(data.data);
+      callBack(data.data);
     })
     .catch(err => {
       console.log(err);

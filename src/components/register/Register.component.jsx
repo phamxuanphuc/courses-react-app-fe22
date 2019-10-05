@@ -5,7 +5,7 @@ import FormInput from "../FormInput/FormInput.components";
 import Button from "../Button/Button.component";
 
 // Router
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
 
 const RegisterComponent = () => {
   const [userNew, setUser] = useState({ email: "", password: "", name: "" });
@@ -65,4 +65,4 @@ const RegisterComponent = () => {
     </div>
   );
 };
-export default RegisterComponent;
+export default withRouter(RegisterComponent);
