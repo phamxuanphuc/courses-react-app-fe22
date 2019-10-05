@@ -19,10 +19,10 @@ const Header = () => (
         <a href="#abc" className="site-btn header-btn">Login</a>
         <nav className="main-menu">
           <ul>
-            <li><Link to="/">Home</Link></li>
+            <li><Link to="/home">Home</Link></li>
             <li><a href="#abc">About us</a></li>
-            <li><Link to="/courses">Courses</Link></li>
-            <li><Link to="/new">News</Link></li>
+            <li><Link to="/home/courses">Courses</Link></li>
+            <li><Link to="/home/new">News</Link></li>
             <li><a href="#abc">Contact</a></li>
           </ul>
         </nav>
