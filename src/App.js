@@ -23,16 +23,6 @@ class App extends React.Component {
   componentDidMount() {
     this.props.getCoursesFromApi();
     this.props.getCateloriesFromApi();
-    const user = {
-      "taiKhoan": "phucdinh",
-      "email": "bapnguyen09052000@gmail.com",
-      "soDT": "0859235748",
-      "maNhom": "GP01",
-      "maLoaiNguoiDung": "HV",
-      "hoTen": "Nguyễn Đình Phúc",
-      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGh1Y2RpbmgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJIViIsIm5iZiI6MTU3MDI1ODIzMCwiZXhwIjoxNTcwMjYxODMwfQ.CQoQLTl2I_aTUktnT5EGz3h5vksnlr1aadbUka0MTRw"
-    };
-    localStorage.setItem("user", JSON.stringify(user));
   }
 
   render() {
