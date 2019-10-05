@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import bg from '../../../assets/images/page-bg/2.jpg';
 import SearchCourses from '../HomePage/SearchCourses/SearchCourses';
 import MyCourses from './MyCourses/MyCourses';
-import _ from 'lodash';
+import { Link } from "react-router-dom";
+// import _ from 'lodash';
 import { getInforUserFromApi } from '../../../redux/reducers/user/user.action';
 
 class UserPage extends Component {
@@ -26,7 +27,7 @@ class UserPage extends Component {
                 <div className="page-info-section set-bg" style={{ backgroundImage: `url(${bg})` }}>
                     <div className="container">
                         <div className="site-breadcrumb">
-                            <a href="#">Home</a>
+                            <Link to="/">Home</Link>
                             <span>My courses</span>
                         </div>
                     </div>

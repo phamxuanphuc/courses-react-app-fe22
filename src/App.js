@@ -6,9 +6,9 @@ import { Switch, Route } from "react-router-dom";
 // Page
 import HomePage from "./pages/clients/HomePage/Home.page";
 import CoursesPage from "./pages/clients/CoursesPage/Courses.page";
-import LoginRegisterPage from "./pages/login-register/LoginRegister.page";
-import DashboardPage from "./pages/admin/DashboardPage/dash-board.page";
-import SignupSignin from "./pages/clients/SignupSigninPage/SignupSignin.page";
+// import LoginRegisterPage from "./pages/login-register/LoginRegister.page";
+// import DashboardPage from "./pages/admin/DashboardPage/dash-board.page";
+// import SignupSignin from "./pages/clients/SignupSigninPage/SignupSignin.page";
 import NewPage from "./pages/clients/New/New";
 
 //Components
@@ -42,20 +42,19 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-main">
-        <Switch>
+        {/* <Switch>
           <Route path="/admin" component={CoursesPage} />
           <Route path="/login" component={LoginRegisterPage} />
-          <Route path="/dashboard" component={DashboardPage} />
+          <Route path="/dashboard" component={DashboardPage} /> */}
           <Header />
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/courses" component={CoursesPage} />
-            <Route path="/sign-in" component={SignupSignin} />
             <Route path="/new" component={NewPage} />
             <Route path="/user/danlu" component={UserPage} />
           </Switch>
           <Footer />
-        </Switch>
+        {/* </Switch> */}
       </div>
     );
   }
