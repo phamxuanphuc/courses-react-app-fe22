@@ -7,6 +7,7 @@ import { Switch, Route } from "react-router-dom";
 import HomePage from "./pages/clients/HomePage/Home.page";
 import CoursesPage from "./pages/clients/CoursesPage/Courses.page";
 import LoginRegisterPage from "./pages/login-register/LoginRegister.page";
+import DashboardPage from './pages/admin/DashboardPage/dash-board.page'
 
 //Components
 import Header from "./components/Header/Header.component";
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route path="/admin" component={CoursesPage} />
         <Route path="/login" component={LoginRegisterPage} />
+        <Route path="/dashboard" component={DashboardPage} />
         <Header />
         <Switch>
           <Route exact path="/" component={HomePage} />

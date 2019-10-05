@@ -8,7 +8,7 @@ import './styles/main.scss'
 
 // Redux
 import { Provider } from "react-redux";
-import { store } from "./redux/store.redux";
+import store  from "./redux/store.redux";
 // Router
 import { BrowserRouter } from "react-router-dom";
 

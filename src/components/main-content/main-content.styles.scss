@@ -1,0 +1,38 @@
+#main-content {
+    transition: all 0.3s ease-in-out;
+    width: calc(100% - 240px);
+    float: right;
+    position: relative;
+    margin-top: 62px;
+    padding: 0 10px;
+    .container-fluid {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+        .block-header {
+          margin: 10px 0;
+          padding: 10px 0;
+          h1 {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 500;
+          }
+          .breadcrumb2{
+            display: inline-block;
+            vertical-align: middle;
+            background: transparent;
+            font-size: 14px;
+            display: flex;
+            list-style: none;
+            .link{
+                color:#007bff;
+                &:hover{
+                    opacity: 0.6;
+                }
+            }
+          }
+        }
+      }
+  }

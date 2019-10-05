@@ -1,3 +1,5 @@
+
+
 @import "./Helpers/variable";
 @import "./Helpers/mixin";
 @import "./Helpers/extend";
@@ -5,8 +7,7 @@
 
 // Theme styles
 @import "./Theme/bootstrap.min.css";
-// @import "./Theme/font-awesome.min.css";
-// @import "./Theme/owl.carousel.css";
+
 @import "./Theme/style.css";
 
 // Styles components
@@ -16,6 +17,16 @@
 @import "../components/Button/Button.styles.scss";
 @import "../components/login/Login.styles.scss";
 @import "../components/register/Register.styles.scss";
+@import "../components/top-navbar/top-navbar.styles.scss";
+@import "../components/left-sidebar/left-sidebar.styles.scss";
+
+
+
 // Styles pages
 @import "../pages/clients/HomePage/Home.styles.scss";
 @import "../pages/login-register/LoginRegister.styles.scss";
+@import "../pages/admin/DashboardPage/dash-board.styles.scss";
+
+
+@import "../components/main-content/main-content.styles.scss";
+@import "../components/main-content-user/main-content.styles.scss";
