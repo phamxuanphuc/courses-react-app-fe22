@@ -1,0 +1,1 @@
+export const API_ENDPOINT = 'http://elearning0706.cybersoft.edu.vn/api'

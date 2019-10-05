@@ -17,7 +17,7 @@ class Courses extends Component {
     }
 
     componentDidUpdate() {
-        if (this.props.cateloriesSelected != "") {
+        if (this.props.cateloriesSelected !== "") {
             document.getElementById(this.props.cateloriesSelected).click();
         }
     }
@@ -73,8 +73,10 @@ $(window).on('load', function () {
     $("#preloder").delay(400).fadeOut("slow");
 
     if ($('.course-items-area').length > 0) {
-        var containerEl = document.querySelector('.course-items-area');
-        var mixer = mixitup(containerEl);
+        let containerEl = document.querySelector('.course-items-area');
+        let mixer = mixitup(containerEl);
+        mixer.show();
+
     }
 
 });

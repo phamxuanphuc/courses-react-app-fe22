@@ -50,7 +50,7 @@ class New extends Component {
                             <div className="col-lg-9">
                                 {/* blog post */}
                                 <div className="blog-post">
-                                    <img src={blog1} alt />
+                                    <img src={blog1} alt='sasas' />
                                     <h3>How to create the perfect resume</h3>
                                     <div className="blog-metas">
                                         <div className="blog-meta author">
