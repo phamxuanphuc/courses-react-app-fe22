@@ -4,7 +4,8 @@ import mixitup from 'mixitup';
 import { connect } from 'react-redux';
 import CoursesItem from './CoursesItem/CoursesItem.jsx';
 import { getCateloriesFromApi } from '../../../../redux/reducers/courses/courses.action'
-import axios from 'axios';
+import ScrollAnimation from 'react-animate-on-scroll';
+import "animate.css/animate.min.css";
 
 class Courses extends Component {
 
@@ -15,18 +16,8 @@ class Courses extends Component {
         }
     }
 
-    componentDidMount() {
-        // axios
-        //     .get("http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhMucKhoaHoc")
-        //     .then((data) => {
-        //         this.setState({ catelories: data.data })
-        //     })
-        //     .catch(err => {})
-        this.props.getCateloriesFromApi();
-    }
-
     componentDidUpdate() {
-        if(this.props.cateloriesSelected != ""){
+        if (this.props.cateloriesSelected != "") {
             document.getElementById(this.props.cateloriesSelected).click();
         }
     }
@@ -39,29 +30,31 @@ class Courses extends Component {
         })
 
         // render catelories
-
         const catelories = this.props.catelories.map((item, index) => {
             return <li key={index} id={item.maDanhMuc} className="control" data-filter={"." + item.maDanhMuc}>{item.tenDanhMuc}</li>
         })
 
         return (
-            <section className="course-section spad">
-                <div ref={this.props.carRef} className="container">
-                    <div className="section-title mb-0">
-                        <h2>Featured Courses</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+
+            <ScrollAnimation duration={1} animateIn='slideInUp'>
+                <section className="course-section spad">
+                    <div ref={this.props.carRef} className="container">
+                        <div className="section-title mb-0">
+                            <h2>Featured Courses</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
+                        </div>
                     </div>
-                </div>
-                <div className="course-warp">
-                    <ul className="course-filter controls">
-                        <li className="control active" data-filter="all">All</li>
-                        {catelories}
-                    </ul>
-                    <div className="row course-items-area">
-                        {courses}
+                    <div className="course-warp">
+                        <ul className="course-filter controls">
+                            <li className="control active" data-filter="all">All</li>
+                            {catelories}
+                        </ul>
+                        <div className="row course-items-area">
+                            {courses}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </ScrollAnimation>
         )
     }
 }
