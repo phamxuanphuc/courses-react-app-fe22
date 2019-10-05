@@ -6,6 +6,7 @@ import MyCourses from './MyCourses/MyCourses';
 import { Link } from "react-router-dom";
 // import _ from 'lodash';
 import { getInforUserFromApi } from '../../../redux/reducers/user/user.action';
+import RegisterComponent from "./../../../components/register/Register.component";
 
 class UserPage extends Component {
 
@@ -38,11 +39,12 @@ class UserPage extends Component {
                 </div>
                 <SearchCourses />
                 <div className="row content">
-                    <div className="col-md-8 my_courses">
+                    <div className="col-md-8 realated-courses my_courses">
                         <MyCourses user={this.state.user} />
                     </div>
-                    <div className="col-md-4 realated-courses my_infor">
-                        <h2 className="rc-title">Thông Tin</h2>
+                    <div className="col-md-4 my_infor">
+                        <h6>Thông Tin</h6>
+                        <RegisterComponent />
                     </div>
                 </div>
             </>
