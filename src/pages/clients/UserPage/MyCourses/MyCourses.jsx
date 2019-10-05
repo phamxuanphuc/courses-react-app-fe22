@@ -14,10 +14,10 @@ class MyCourses extends Component {
         }
     }
 
-
-
     myCourses = () => {
-        
+        this.setState({
+            selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
+        })
     }
 
     allCourses = () => {
@@ -27,7 +27,6 @@ class MyCourses extends Component {
     }
 
     render() {
-
         var settings = {
             dots: true,
             infinite: true,
@@ -40,14 +39,14 @@ class MyCourses extends Component {
         };
 
         // render courses
-        const courses = this.state.selectCourses.map((item, index) => {
+        var courses = this.state.selectCourses.map((item, index) => {
             return (
                 <div key={index} className="item p-1">
                     <MyCoursesItem courses={item} key={index} />
                 </div>
             )
         })
-
+        
         return (
             <div className="my_courses py-5">
                 <div className="title">
