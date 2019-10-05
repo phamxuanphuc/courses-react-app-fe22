@@ -6,7 +6,7 @@ import MyCourses from './MyCourses/MyCourses';
 import { Link } from "react-router-dom";
 // import _ from 'lodash';
 import { getInforUserFromApi } from '../../../redux/reducers/user/user.action';
-import RegisterComponent from "./../../../components/register/Register.component";
+import Form from "./Form/Form";
 
 class UserPage extends Component {
 
@@ -44,7 +44,7 @@ class UserPage extends Component {
                     </div>
                     <div className="col-md-4 my_infor">
                         <h6>Thông Tin</h6>
-                        <RegisterComponent />
+                        <Form />
                     </div>
                 </div>
             </>
