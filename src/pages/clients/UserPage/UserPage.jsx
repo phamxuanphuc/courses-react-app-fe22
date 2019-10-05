@@ -12,16 +12,20 @@ class UserPage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            
+            user: {},
         }
     }
 
     componentDidMount() {
-        getInforUserFromApi(JSON.parse(localStorage.getItem("user")).taiKhoan);
+        const user = JSON.parse(localStorage.getItem("user"));
+        getInforUserFromApi(user.taiKhoan, user.accessToken, (data) => {
+            this.setState({
+                user: data,
+            })
+        })
     }
 
     render() {
-
         return (
             <>
                 <div className="page-info-section set-bg" style={{ backgroundImage: `url(${bg})` }}>
@@ -35,7 +39,7 @@ class UserPage extends Component {
                 <SearchCourses />
                 <div className="row content">
                     <div className="col-md-8 my_courses">
-                        <MyCourses />
+                        <MyCourses user={this.state.user} />
                     </div>
                     <div className="col-md-4 realated-courses my_infor">
                         <h2 className="rc-title">Thông Tin</h2>

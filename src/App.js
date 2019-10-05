@@ -24,12 +24,13 @@ class App extends React.Component {
     this.props.getCoursesFromApi();
     this.props.getCateloriesFromApi();
     const user = {
-      accessToken:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiZGFubHUxMjM0IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiSFYiLCJuYmYiOjE1NjgwMjgxNzksImV4cCI6MTU2ODAzMTc3OX0.P77_1BNrbF3pUS89xn_meNmz45OAS-npaLV9AZknXO8",
-      taiKhoan: "phucdinh",
-      hoTen: "Nguyễn Đình Phúc",
-      email: "bapnguyen09052000@gmail.com",
-      soDt: "0859235748"
+      "taiKhoan": "phucdinh",
+      "email": "bapnguyen09052000@gmail.com",
+      "soDT": "0859235748",
+      "maNhom": "GP01",
+      "maLoaiNguoiDung": "HV",
+      "hoTen": "Nguyễn Đình Phúc",
+      "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoicGh1Y2RpbmgiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL3JvbGUiOiJIViIsIm5iZiI6MTU3MDI1ODIzMCwiZXhwIjoxNTcwMjYxODMwfQ.CQoQLTl2I_aTUktnT5EGz3h5vksnlr1aadbUka0MTRw"
     };
     localStorage.setItem("user", JSON.stringify(user));
   }

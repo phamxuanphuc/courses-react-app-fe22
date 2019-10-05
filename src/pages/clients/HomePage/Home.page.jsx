@@ -11,6 +11,7 @@ import Footer from "../../../components/Footer/Footer.component";
 
 import NewPage from "../New/New";
 import CoursesPage from "../CoursesPage/Courses.page";
+import UserPage from "../UserPage/UserPage.jsx";
 
 
 
@@ -38,6 +39,9 @@ class Home extends React.Component {
           </Route>
           <Route path="/home/courses">
             <CoursesPage />
+          </Route>
+          <Route path="/home/user">
+            <UserPage />
           </Route>
         </Switch>
         <Footer />
