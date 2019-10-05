@@ -22,8 +22,8 @@ const Header = () => (
             <li><Link to="/">Home</Link></li>
             <li><a href="#abc">About us</a></li>
             <li><Link to="/courses">Courses</Link></li>
-            <li><a href="blog.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><Link to="/new">News</Link></li>
+            <li><a href="#abc">Contact</a></li>
           </ul>
         </nav>
       </div>
@@ -34,7 +34,6 @@ const Header = () => (
 
 const toggleBar = () => {
   $('.main-menu').slideToggle(400);
-  console.log("test")
 }
 
 export default Header;

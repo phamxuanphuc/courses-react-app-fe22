@@ -34,5 +34,4 @@ export const getCateloriesFromApi = () => {
         })
         .catch(err => {console.log(err)})
     }
-
 }

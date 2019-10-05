@@ -1,74 +1,108 @@
-import React from "react";
-import PageBg from '../../../assets/images/page-bg/2.jpg'
+import React, { Component } from "react";
+import PageBg from '../../../assets/images/page-bg/2.jpg';
+import coursesf1 from '../../../assets/images/courses/f-1.jpg';
+import coursesf2 from '../../../assets/images/courses/f-2.jpg';
+import authors1 from '../../../assets/images/authors/1.jpg';
+import authors2 from '../../../assets/images/authors/2.jpg';
+import Courses from '../HomePage/Courses/Courses.jsx'
 
-const Courses = () => (
-  <>
-    <div className="page-info-section set-bg" style={{ backgroundImage: `url(${PageBg})`}}>
-    </div>
+class CoursesPage extends Component {
+  render() {
+    return (
+      <>
+        {/* Page info */}
+        <div className="page-info-section set-bg" style={{ backgroundImage: `url(${PageBg})` }}>
+          <div className="container">
+            <div className="site-breadcrumb">
+              <a href="#">Home</a>
+              <span>Courses</span>
+            </div>
+          </div>
+        </div>
+        {/* Page info end */}
 
-    <section className="single-course spad pb-0">
-      <div className="container">
-        <div className="course-meta-area">
-          <div className="row">
-            <div className="col-lg-10 offset-lg-1">
-              <div className="course-note">Featured Course</div>
-              <h3>HTNL5 &amp; CSS For Begginers</h3>
-              <div className="course-metas">
-                <div className="course-meta">
-                  <div className="course-author">
-                    <div className="ca-pic set-bg" data-setbg="img/authors/2.jpg" />
-                    <h6>Teacher</h6>
-                    <p>William Parker, <span>Developer</span></p>
-                  </div>
+        <div>
+          <section className="search-section ss-other-page">
+            <div className="container">
+              <div className="search-warp">
+                <div className="section-title text-white">
+                  <h2><span>Search your course</span></h2>
                 </div>
-                <div className="course-meta">
-                  <div className="cm-info">
-                    <h6>Category</h6>
-                    <p>Development</p>
-                  </div>
-                </div>
-                <div className="course-meta">
-                  <div className="cm-info">
-                    <h6>Students</h6>
-                    <p>120 Registered Students</p>
-                  </div>
-                </div>
-                <div className="course-meta">
-                  <div className="cm-info">
-                    <h6>Reviews</h6>
-                    <p>2 Reviews <span className="rating">
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star" />
-                      <i className="fa fa-star is-fade" />
-                    </span></p>
+                <div className="row">
+                  <div className="col-lg-10 offset-lg-1">
+                    {/* search form */}
+                    <form className="course-search-form">
+                      <input type="text" placeholder="Course" />
+                      <input type="text" className="last-m" placeholder="Category" />
+                      <button className="site-btn btn-dark">Search Couse</button>
+                    </form>
                   </div>
                 </div>
               </div>
-              <a href="#" className="site-btn price-btn">Price: $15</a>
-              <a href="#" className="site-btn buy-btn">Buy This Course</a>
+            </div>
+          </section>
+
+          <Courses />
+
+          <div className="featured-courses">
+            <div className="featured-course course-item">
+              <div className="course-thumb set-bg" style={{ backgroundImage: `url(${coursesf1})` }}>
+                <div className="price">Price: $15</div>
+              </div>
+              <div className="row">
+                <div className="col-lg-6 offset-lg-6 pl-0">
+                  <div className="course-info">
+                    <div className="course-text">
+                      <div className="fet-note">Featured Course</div>
+                      <h5>HTNL5 &amp; CSS For Begginers</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna</p>
+                      <div className="students">120 Students</div>
+                    </div>
+                    <div className="course-author">
+                      <div className="ca-pic set-bg" style={{ backgroundImage: `url(${authors1})` }} />
+                      <p>William Parker, <span>Developer</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="featured-course course-item">
+              <div className="course-thumb set-bg" style={{ backgroundImage: `url(${coursesf2})` }}>
+                <div className="price">Price: $15</div>
+              </div>
+              <div className="row">
+                <div className="col-lg-6 pr-0">
+                  <div className="course-info">
+                    <div className="course-text">
+                      <div className="fet-note">Featured Course</div>
+                      <h5>HTNL5 &amp; CSS For Begginers</h5>
+                      <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna</p>
+                      <div className="students">120 Students</div>
+                    </div>
+                    <div className="course-author">
+                      <div className="ca-pic set-bg" style={{ backgroundImage: `url(${authors2})` }} />
+                      <p>William Parker, <span>Developer</span></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-        <div className="row">
-          <div className="col-lg-10 offset-lg-1 course-list mt-5">
-            <div className="cl-item">
-              <h4>Course Description</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. </p>
+
+        <section className="banner-section spad">
+          <div className="container">
+            <div className="section-title mb-0 pb-2">
+              <h2>Join Our Community Now!</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
-            <div className="cl-item">
-              <h4>Certification</h4>
-              <p>Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum.</p>
-            </div>
-            <div className="cl-item">
-              <h4>The Instructor</h4>
-              <p>Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. </p>
+            <div className="text-center pt-5">
+              <a href="#" className="site-btn">Register Now</a>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-  </>
-);
-export default Courses;
+        </section>
+      </>
+    )
+  }
+} 
+export default CoursesPage;

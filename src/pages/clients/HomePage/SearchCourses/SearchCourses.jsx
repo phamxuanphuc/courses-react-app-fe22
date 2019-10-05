@@ -42,7 +42,7 @@ class SearchCourses extends Component {
               <h2><span>Search your course</span></h2>
             </div>
             {/* search form */}
-            <form className="course-search-form row">
+            <form className="course-search-form my-course-search-form row">
               <div className="col-md-5">
                 <select className="site-btn mySelect" type="text" placeholder="Course" value={this.state.coursesName} onChange={this.onChange} name="coursesName">
                   {coursesOption}

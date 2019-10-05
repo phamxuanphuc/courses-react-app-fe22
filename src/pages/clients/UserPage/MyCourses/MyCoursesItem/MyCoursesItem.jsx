@@ -3,10 +3,8 @@ import authors1 from "../../../../../assets/images/authors/1.jpg";
 
 class CoursesItem extends Component {
 
-    render() {
-        const setClass = `mix col-lg-3 col-md-4 col-sm-6 ${this.props.courses.danhMucKhoaHoc.maDanhMucKhoahoc}`;
-        return (
-            <div className={setClass}>
+    render() {        
+        return (            
                 <div className="course-item">
                     <div className="course-thumb set-bg" style={{ backgroundImage: `url(${this.props.courses.hinhAnh})` }} >
                         <div className="price">Price: $15</div>
@@ -26,7 +24,6 @@ class CoursesItem extends Component {
                         </div>
                     </div>
                 </div>
-            </div>
         )
     }
 }
