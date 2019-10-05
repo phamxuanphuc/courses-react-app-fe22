@@ -5,26 +5,25 @@ import FormInput from "../FormInput/FormInput.components";
 import Button from "../Button/Button.component";
 
 import * as userApi from "../../apis/auth.api";
-import {  withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
-const SignIn = ({history}) => {
+const SignIn = ({ history }) => {
   const [user, setUser] = useState({ username: "", password: "" });
   const { username, password } = user;
 
   const handleSubmit = e => {
     e.preventDefault();
-    let userInfo={
+    let userInfo = {
       taikhoan: user.username,
       matkhau: user.password
-    }
-    userApi.loginUser(userInfo).then(status=>{
-      if(status===200){
-        history.push('/home');
-        setUser({ username: "", password: "" })
+    };
+   
+    userApi.loginUser(userInfo).then(status => {
+      if (status === 200) {
+        setUser({ username: "", password: "" });
+        history.push("/home");
       }
-    })
-
-    
+    });
   };
   const handleChange = e => {
     setUser({ ...user, [e.target.name]: e.target.value });
