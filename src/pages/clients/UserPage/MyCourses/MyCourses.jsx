@@ -4,31 +4,45 @@ import MyCoursesItem from '../../UserPage/MyCourses/MyCoursesItem/MyCoursesItem'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
+import nodata from '../../../../assets/images/courses/NoCourses.png'
 class MyCourses extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
             selectCourses: [],
+            checkMyCourses: false,
         }
     }
 
     myCourses = () => {
-        this.setState({
-            selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
-        })
+        document.getElementById("my_courses").classList.add("my_active");
+        document.getElementById("all").classList.remove("my_active");
+        if (this.props.user.chiTietKhoaHocGhiDanh.length === 0) {
+            this.setState({
+                selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
+                checkMyCourses: true,
+            })
+        } else {
+            this.setState({
+                selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
+                checkMyCourses: false,
+            })
+        }
     }
 
     allCourses = () => {
+        document.getElementById("all").classList.add("my_active");
+        document.getElementById("my_courses").classList.remove("my_active");
         this.setState({
             selectCourses: this.props.courses,
+            checkMyCourses: false,
         })
     }
 
     render() {
         var settings = {
-            dots: true,
+            dots: false,
             infinite: true,
             speed: 500,
             slidesToShow: 3,
@@ -46,15 +60,24 @@ class MyCourses extends Component {
                 </div>
             )
         })
-        
+
         return (
-            <div className="my_courses py-5">
+            <div className="my_courses">
                 <div className="title">
-                    <h6 onClick={this.allCourses}>All</h6>/<h6 onClick={this.myCourses}>My courses</h6>
+                    <h6 id="all" onClick={this.allCourses}>All</h6>/<h6 id="my_courses" onClick={this.myCourses}>My courses</h6>
                 </div>
-                <Slider {...settings}>
-                    {courses}
-                </Slider>
+                <div className="courses">
+                    {
+                        this.state.checkMyCourses === true ?
+                            <div className="img">
+                                <img src={nodata} alt="nodata" />
+                                <p>Không có khóa học</p>
+                            </div> :
+                            <Slider {...settings}>
+                                {courses}
+                            </Slider>
+                    }
+                </div>
             </div>
         );
     }

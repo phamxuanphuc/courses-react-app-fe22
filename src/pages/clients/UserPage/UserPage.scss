@@ -1,5 +1,16 @@
-.content{
-    margin: 100px 0;
-    .my_infor{
+.content {
+  margin: 100px 0;
+  .my_infor {
+    background-color: #d82a4e;
+    padding: 30px 0;
+    display: block;
+    text-align: center;
+    h6 {
+      display: inline;
+      font-size: 27px;
+      transition: 0.2s;
+      cursor: pointer;
+      color: white;
     }
+  }
 }

@@ -48,7 +48,7 @@ const RegisterComponent = () => {
             required={true}
           />
           <div className="button">
-            <Button signInGoogle={true}>
+            <Button type='button' signInGoogle={true}>
               <span class="lnr lnr-arrow-left mr-1"></span>Go Home
             </Button>
 

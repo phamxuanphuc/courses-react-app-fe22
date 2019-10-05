@@ -20,7 +20,7 @@ class CoursesItem extends Component {
                         </div>
                         <div className="course-author">
                             <div className="ca-pic set-bg" style={{ backgroundImage: `url(${authors1})` }} />
-                            <p>{this.props.courses.nguoiTao.hoTen}, <span>Developer</span></p>
+                            <p style={{whiteSpace: "noWrap"}}>{this.props.courses.nguoiTao.hoTen}, <span>Developer</span></p>
                         </div>
                     </div>
                 </div>
