@@ -26,11 +26,11 @@ const LeftSidebar = () => {
         </div>
         <nav id="left-sidebar-nav" className="sidebar-nav">
           <ul id="main-menu" className="metismenu">
-            <li class="header">Main</li>
+            <li className="header">Main</li>
             {NavMenu.map(menu => (
-              <li>
+              <li key={menu.id}>
                 <NavLink to={menu.href} className='link'>
-                  <i class={menu.icon}></i>
+                  <i className={menu.icon}></i>
                   <span>{menu.name}</span>
                 </NavLink>
               </li>
