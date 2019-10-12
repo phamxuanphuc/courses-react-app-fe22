@@ -1,8 +1,4 @@
 .card {
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   display: inline-block;
   vertical-align: middle;
@@ -15,6 +11,8 @@
   border-radius: 0.25rem;
   min-width: 0;
   word-wrap: break-word;
+  background-color: #282b2f !important;
+  height: 500px;
 
   .nav {
     display: flex;
@@ -24,85 +22,107 @@
     list-style: none;
   }
   .nav-tabs {
-    border-bottom: 1px solid #dee2e6;
     border-color: #2f3338;
   }
   .nav-link {
     color: #a5a8ad;
     &:hover {
       background-color: #2f3338;
-      border-color: #2f3338;
+      border: none;
     }
     &.active {
       background-color: #2f3338;
       border-color: #2f3338;
       color: #a5a8ad;
     }
-  }
-  .table-responsive {
-    display: block;
-    width: 100%;
-    overflow-x: auto;
-  }
-  .table {
-    color: #77797c;
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    thead {
-      display: table-header-group;
-      vertical-align: middle;
-      border-color: inherit;
-      tr {
-        display: table-row;
-        vertical-align: inherit;
-        border-color: inherit;
-        th:first-child {
-          border-radius: 0.1875rem 0 0 0.1875rem;
-        }
-        th {
-          background: #282b2f;
-          border-top: 0;
-          border-bottom: 0;
-          vertical-align: middle;
-          white-space: nowrap;
-          border-color: #2f3338;
-          font-weight: 400;
-          border-width: 1px;
-          padding: 0.75rem;
-          font-weight: 400;
-          border-width: 1px;
-        }
-      }
+    .table-responsive {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
     }
-    tbody {
-      display: table-row-group;
-      vertical-align: middle;
-      border-color: inherit;
-      tr {
-        display: table-row;
-        vertical-align: inherit;
-        border-color: inherit;
-        background: #282b2f;
-        border-radius: 0.1875rem;
-        td:first-child {
-          border-radius: 0.1875rem 0 0 0.1875rem;
-        }
-        td {
-          vertical-align: middle;
-          white-space: nowrap;
-          border-color: #2f3338;
-          padding: 0.75rem;
-        }
-      }
-    }
-
-    .table-custom {
-      border-collapse: separate !important;
-      .table.table-custom.spacing8 {
+    .table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 1rem;
+      background-color: transparent;
+      font-size: 12px;
+      &.table-new {
+        border-collapse: separate !important;
         border-spacing: 0 8px !important;
       }
+      thead {
+        tr {
+          display: table-row;
+          th:first-child {
+            border-radius: 0.1875rem 0 0 0.1875rem;
+          }
+          th {
+            color: white;
+            background: #282b2f;
+
+            white-space: nowrap;
+            border-color: none;
+            font-weight: 400;
+            border-width: 1px;
+            padding: 0.75rem;
+            font-weight: 400;
+            border-width: 1px;
+          }
+        }
+      }
+      tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+        tr {
+          display: table-row;
+          vertical-align: inherit;
+          border-color: inherit;
+          background: #282b2f;
+          border-radius: 0.1875rem;
+          td:first-child {
+            border-radius: 0.1875rem 0 0 0.1875rem;
+          }
+          td {
+            vertical-align: middle;
+            white-space: nowrap;
+            border-color: #2f3338;
+            padding: 0.75rem;
+          }
+        }
+      }
     }
+  }
+  .loading-users {
+    height: 100%;
+    position: relative;
+  }
+}
+.table th,
+.table td {
+  border: none !important;
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  .title {
+    color: white;
+    font-weight: 400;
+    font-size: 15px;
+  }
+  .subtitle {
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+    opacity: 0.5;
+  }
+  &.date-created {
+    opacity: 0.5;
+    font-weight: 300;
+  }
+}
+.option {
+  opacity: 0.5;
+  &:hover {
+    opacity: 1;
   }
 }

@@ -6,7 +6,6 @@
 
 // Theme styles
 @import "./Theme/bootstrap.min.css";
-
 @import "./Theme/style.css";
 
 // Styles components
@@ -18,6 +17,8 @@
 @import "../components/register/Register.styles.scss";
 @import "../components/top-navbar/top-navbar.styles.scss";
 @import "../components/left-sidebar/left-sidebar.styles.scss";
+@import "../components/main-content-user/pagination/pagination.style.scss";
+@import "../components/AdminComponent/Loading/loading.styles.scss";
 
 // Styles pages
 @import "../pages/clients/HomePage/Home.styles.scss";
@@ -25,7 +26,7 @@
 @import "../pages/admin/DashboardPage/dash-board.styles.scss";
 
 @import "../components/main-content/main-content.styles.scss";
-@import "../components/main-content-user/main-content.styles.scss";
+
 @import "../pages/clients/HomePage/SearchCourses/SearchCourses.scss";
 @import "../pages/clients/HomePage/HeroSection/HeroSection.scss";
 @import "../pages/clients/HomePage/Courses/CoursesItem/CoursesItem.scss";
@@ -33,6 +34,10 @@
 @import "../pages/clients/HomePage/AboutUs/AboutUs.scss";
 @import "../pages/clients/UserPage/UserPage.scss";
 @import "../pages/clients/UserPage/MyCourses/MyCourses.scss";
+<<<<<<< HEAD
+@import "../components/main-content-user/main-content.styles.scss";
+=======
 @import "../pages/clients/UserPage/Form/Form.scss";
 
+>>>>>>> master
 // @import "../pages/clients/SignupSigninPage/SignupSignin.styles.scss";

@@ -30,3 +30,32 @@ export const getInforUserFromApi = (userAccont, token, callBack) => {
 //       .catch(err => console.log(err));
 //   };
 // };
+export const fetchUsers=()=>{
+  return{
+    type: userTypes.FETCH_USERS
+  }
+};
+export const fetchUsersNext=(page)=>{
+  return{
+    type: userTypes.FETCH_USERS_NEXT,
+    payload: page
+  }
+};
+export const fetchUsersPrev=(page)=>{
+  return{
+    type: userTypes.FETCH_USERS_PREV,
+    payload: page
+  }
+};
+export const fetchUsersSuccess=(users)=>{
+  return{
+    type: userTypes.FETCH_USERS_SUCCESS,
+    payload: users
+  }
+};
+export const fetchUsersFailed=(err)=>{
+  return{
+    type: userTypes.FETCH_USERS_FAILED,
+    padload: err
+  }
+};
