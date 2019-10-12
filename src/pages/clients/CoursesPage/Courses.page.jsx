@@ -7,6 +7,17 @@ import authors2 from '../../../assets/images/authors/2.jpg';
 import Courses from '../HomePage/Courses/Courses.jsx'
 
 class CoursesPage extends Component {
+
+  componentDidMount(){
+    const scrollFunction = () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    setTimeout(() => {
+      scrollFunction();
+    }, 500);
+  }
+
   render() {
     return (
       <>
@@ -14,7 +25,7 @@ class CoursesPage extends Component {
         <div className="page-info-section set-bg" style={{ backgroundImage: `url(${PageBg})` }}>
           <div className="container">
             <div className="site-breadcrumb">
-              <a href="#">Home</a>
+              <a href="abc">Home</a>
               <span>Courses</span>
             </div>
           </div>
@@ -97,7 +108,7 @@ class CoursesPage extends Component {
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
             </div>
             <div className="text-center pt-5">
-              <a href="#" className="site-btn">Register Now</a>
+              <a href="abc" className="site-btn">Register Now</a>
             </div>
           </div>
         </section>

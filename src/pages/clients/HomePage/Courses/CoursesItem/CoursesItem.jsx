@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import authors1 from "../../../../../assets/images/authors/1.jpg";
+import {withRouter} from 'react-router-dom';
+import {coursesSelected} from "../../../../../redux/reducers/courses/courses.action"
+import {connect} from 'react-redux'
 
 class CoursesItem extends Component {
+
+
+    toDetailCourses = (maKhoaHoc) => {
+        this.props.coursesSelected(maKhoaHoc);
+        this.props.history.push(`/home/courses-detail`, maKhoaHoc);
+    }
 
     render() {
         const setClass = `mix col-lg-3 col-md-4 col-sm-6 ${this.props.courses.danhMucKhoaHoc.maDanhMucKhoahoc}`;
@@ -17,7 +26,7 @@ class CoursesItem extends Component {
                             <p>{this.props.courses.moTa}</p>
                             <div className="d-flex">
                                 <div className="students">{this.props.courses.luotXem} View</div>
-                                <button className="site-btn my_site-btn">Đăng kí</button>
+                                <button onClick={ () => this.toDetailCourses(this.props.courses.maKhoaHoc)} className="site-btn to_detail my_site-btn">Chi tiết</button>
                             </div>
                         </div>
                         <div className="course-author">
@@ -31,4 +40,4 @@ class CoursesItem extends Component {
     }
 }
 
-export default CoursesItem
+export default withRouter(connect(null, {coursesSelected})(CoursesItem))

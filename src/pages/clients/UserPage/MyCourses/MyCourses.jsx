@@ -12,21 +12,40 @@ class MyCourses extends Component {
         this.state = {
             selectCourses: [],
             checkMyCourses: false,
+            check: false,
+        }
+    }
+
+    componentDidMount() {
+        const user = JSON.parse(localStorage.getItem("user"));
+        if (user != null) {
+            setTimeout(() => {
+                document.getElementById("my_courses").click();
+            }, 500)
         }
     }
 
     myCourses = () => {
         document.getElementById("my_courses").classList.add("my_active");
         document.getElementById("all").classList.remove("my_active");
-        if (this.props.user.chiTietKhoaHocGhiDanh.length === 0) {
+        let myCourses = [];
+        this.props.courses.map((item) => {
+            this.props.user.chiTietKhoaHocGhiDanh.map((item2) => {
+                if(item.maKhoaHoc === item2.maKhoaHoc){
+                    myCourses.push(item);
+                }
+            })
+        })
+        if (myCourses.length === 0) {
             this.setState({
-                selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
+                selectCourses: myCourses,
                 checkMyCourses: true,
             })
         } else {
             this.setState({
-                selectCourses: this.props.user.chiTietKhoaHocGhiDanh,
+                selectCourses: myCourses,
                 checkMyCourses: false,
+                check: true,
             })
         }
     }
@@ -37,6 +56,7 @@ class MyCourses extends Component {
         this.setState({
             selectCourses: this.props.courses,
             checkMyCourses: false,
+            check: false,
         })
     }
 
@@ -52,11 +72,10 @@ class MyCourses extends Component {
             ]
         };
 
-        // render courses
         var courses = this.state.selectCourses.map((item, index) => {
             return (
                 <div key={index} className="item p-1">
-                    <MyCoursesItem courses={item} key={index} />
+                    <MyCoursesItem check={this.state.check} courses={item} key={index} />
                 </div>
             )
         })
@@ -86,7 +105,7 @@ class MyCourses extends Component {
 const mapStateToProps = (state) => {
     return {
         courses: state.courses,
-        catelories: state.catelories
+        catelories: state.catelories,
     };
 }
 

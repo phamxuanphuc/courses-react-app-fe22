@@ -16,7 +16,7 @@ class New extends Component {
                 <div className="page-info-section set-bg" style={{ backgroundImage: `url(${Pagebg3})` }}>
                     <div className="container">
                         <div className="site-breadcrumb">
-                            <a href="#">Home</a>
+                            <a href="abc">Home</a>
                             <span>Blog</span>
                         </div>
                     </div>
@@ -55,69 +55,69 @@ class New extends Component {
                                     <div className="blog-metas">
                                         <div className="blog-meta author">
                                             <div className="post-author set-bg" style={{ backgroundImage: `url(${authors1})` }} />
-                                            <a href="#">James Smith</a>
+                                            <a href="abc">James Smith</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">Development</a>
+                                            <a href="abc">Development</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">June 12, 2018</a>
+                                            <a href="abc">June 12, 2018</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">2 Comments</a>
+                                            <a href="abc">2 Comments</a>
                                         </div>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. </p>
-                                    <a href="#" className="site-btn readmore">Read More</a>
+                                    <a href="abc" className="site-btn readmore">Read More</a>
                                 </div>
                                 {/* blog post */}
                                 <div className="blog-post">
-                                    <img src={blog2} alt />
+                                    <img src={blog2} alt="abc" />
                                     <h3>5 Tips to make money from home</h3>
                                     <div className="blog-metas">
                                         <div className="blog-meta author">
                                             <div className="post-author set-bg" style={{ backgroundImage: `url(${authors2})` }} />
-                                            <a href="#">James Smith</a>
+                                            <a href="abc">James Smith</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">Development</a>
+                                            <a href="abc">Development</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">June 12, 2018</a>
+                                            <a href="abc">June 12, 2018</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">2 Comments</a>
+                                            <a href="abc">2 Comments</a>
                                         </div>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. </p>
-                                    <a href="#" className="site-btn readmore">Read More</a>
+                                    <a href="abc" className="site-btn readmore">Read More</a>
                                 </div>
                                 {/* blog post */}
                                 <div className="blog-post">
-                                    <img src={blog3} alt />
+                                    <img src={blog3} alt="abc" />
                                     <h3>Why choose an online course?</h3>
                                     <div className="blog-metas">
                                         <div className="blog-meta author">
                                             <div className="post-author set-bg" style={{ backgroundImage: `url(${authors3})` }} />
-                                            <a href="#">James Smith</a>
+                                            <a href="abc">James Smith</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">Development</a>
+                                            <a href="abc">Development</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">June 12, 2018</a>
+                                            <a href="abc">June 12, 2018</a>
                                         </div>
                                         <div className="blog-meta">
-                                            <a href="#">2 Comments</a>
+                                            <a href="abc">2 Comments</a>
                                         </div>
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur. Phasellus sollicitudin et nunc eu efficitur. Sed ligula nulla, molestie quis ligula in, eleifend rhoncus ipsum. Donec ultrices, sem vel efficitur molestie, massa nisl posuere ipsum, ut vulputate mauris ligula a metus. Aenean vel congue diam, sed bibendum ipsum. Nunc vulputate aliquet tristique. Integer et pellentesque urna. </p>
-                                    <a href="#" className="site-btn readmore">Read More</a>
+                                    <a href="abc" className="site-btn readmore">Read More</a>
                                 </div>
                                 <div className="site-pagination">
                                     <span className="active">01.</span>
-                                    <a href="#">02.</a>
-                                    <a href="#">03</a>
+                                    <a href="abc">02.</a>
+                                    <a href="abc">03</a>
                                 </div>
                             </div>
                             <div className="col-lg-3 col-md-5 col-sm-9 sidebar">
@@ -130,39 +130,39 @@ class New extends Component {
                                 <div className="sb-widget-item">
                                     <h4 className="sb-w-title">Categories</h4>
                                     <ul>
-                                        <li><a href="#">Developement</a></li>
-                                        <li><a href="#">Social Media</a></li>
-                                        <li><a href="#">Press</a></li>
-                                        <li><a href="#">Events &amp; Lifestyle</a></li>
-                                        <li><a href="#">Uncategorizes</a></li>
+                                        <li><a href="abc">Developement</a></li>
+                                        <li><a href="abc">Social Media</a></li>
+                                        <li><a href="abc">Press</a></li>
+                                        <li><a href="abc">Events &amp; Lifestyle</a></li>
+                                        <li><a href="abc">Uncategorizes</a></li>
                                     </ul>
                                 </div>
                                 <div className="sb-widget-item">
                                     <h4 className="sb-w-title">Archives</h4>
                                     <ul>
-                                        <li><a href="#">February 2018</a></li>
-                                        <li><a href="#">March 2018</a></li>
-                                        <li><a href="#">April 2018</a></li>
-                                        <li><a href="#">May 2018</a></li>
-                                        <li><a href="#">June 2018</a></li>
+                                        <li><a href="abc">February 2018</a></li>
+                                        <li><a href="abc">March 2018</a></li>
+                                        <li><a href="abc">April 2018</a></li>
+                                        <li><a href="abc">May 2018</a></li>
+                                        <li><a href="abc">June 2018</a></li>
                                     </ul>
                                 </div>
                                 <div className="sb-widget-item">
                                     <h4 className="sb-w-title">Archives</h4>
                                     <div className="tags">
-                                        <a href="#">education</a>
-                                        <a href="#">courses</a>
-                                        <a href="#">development</a>
-                                        <a href="#">design</a>
-                                        <a href="#">on line courses</a>
-                                        <a href="#">wp</a>
-                                        <a href="#">html5</a>
-                                        <a href="#">music</a>
+                                        <a href="abc">education</a>
+                                        <a href="abc">courses</a>
+                                        <a href="abc">development</a>
+                                        <a href="abc">design</a>
+                                        <a href="abc">on line courses</a>
+                                        <a href="abc">wp</a>
+                                        <a href="abc">html5</a>
+                                        <a href="abc">music</a>
                                     </div>
                                 </div>
                                 <div className="sb-widget-item">
                                     <div className="add">
-                                        <a href="#"><img src={add} alt /></a>
+                                        <a href="abc"><img src={add} alt="abc" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -178,7 +178,7 @@ class New extends Component {
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris scelerisque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
                         </div>
                         <div className="text-center pt-5">
-                            <a href="#" className="site-btn">Register Now</a>
+                            <a href="abc" className="site-btn">Register Now</a>
                         </div>
                     </div>
                 </section>

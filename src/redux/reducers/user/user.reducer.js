@@ -1,15 +1,12 @@
-const initialState={
-    currentUser:null
-  };
+import * as Types from './user.constans.js';
+const initialState = {};
+
   const userReducer =(state=initialState, action)=>{
     switch (action.type) {
-      case "SET_CURRENT_USER":
-        return{
-          ...state,
-          currentUser: action.payload
-        };
-      default:
-          return {...state}
+      case Types.SET_CURRENT_USER:
+        return action.payload
+      
+        default: return state;
     }
   };
   export default userReducer;

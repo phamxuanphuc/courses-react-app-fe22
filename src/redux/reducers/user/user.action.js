@@ -1,11 +1,12 @@
 import * as userTypes from "./user.constans";
-// import * as userApi from "../../../apis/auth.api";
 import axios from "axios";
 
-export const setCurrentUser = user => ({
-  type: userTypes.SET_CURRENT_USER,
-  payload: user
-});
+export const setCurrentUser = (user) => {
+  return {
+    type: userTypes.SET_CURRENT_USER,
+    payload: user
+  }
+};
 
 export const getInforUserFromApi = (userAccont, token, callBack) => {
   let config = {
@@ -14,7 +15,7 @@ export const getInforUserFromApi = (userAccont, token, callBack) => {
     }
   }
   axios
-    .post(`http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/ThongTinTaiKhoan`, {'taiKhoan': userAccont}, config )
+    .post(`http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/ThongTinTaiKhoan`, { 'taiKhoan': userAccont }, config)
     .then(data => {
       callBack(data.data);
     })
@@ -22,6 +23,59 @@ export const getInforUserFromApi = (userAccont, token, callBack) => {
       console.log(err);
     });
 };
+
+export const updateInforUser = (newInfor, token, callBack, errCallBack) => {
+  let config = {
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  }
+  axios
+    .put(`http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/CapNhatThongTinNguoiDung`, newInfor, config)
+    .then(data => {
+      callBack();
+    })
+    .catch((error) => {
+      errCallBack(error.response.data);
+    });
+}
+
+export const registerCourses = (obj, token, callBack, errCallBack) => {
+  let config = {
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  }
+  axios
+    .post(`http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/DangKyKhoaHoc`, obj, config)
+    .then(data => {
+      callBack();
+      console.log(data.data)
+    })
+    .catch((error) => {
+      errCallBack(error.response.data);
+      console.log(error.response)
+    });
+}
+
+export const cancelRegistrationCourses = (obj, token, callBack, errCallBack) => {
+  let config = {
+    headers: {
+      Authorization: 'Bearer ' + token
+    }
+  }
+  axios
+    .post(`http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/HuyGhiDanh`, obj, config)
+    .then(data => {
+      callBack(data.data);
+    })
+    .catch((error) => {
+      errCallBack(error.response.data);
+      console.log(error.response)
+    });
+}
+
+
 // export const loginUserAction = (data) => {
 //   return dispatch => {
 //     userApi

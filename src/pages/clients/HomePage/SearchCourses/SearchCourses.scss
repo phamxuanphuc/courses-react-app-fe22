@@ -1,11 +1,18 @@
-.site-btn.mySelect{
-    background-color: #ffffff;
-    color: black;
-    width: 100%;
-}
-.my-course-search-form{
-    width: 80%;
-    margin: auto;
-    transform: translateX(-4%)
+.site-btn.mySelect {
+  background-color: #ffffff;
+  color: black;
+  width: 100%;
 }
 
+.my_form {
+  .my-course-search-form {
+    justify-content: center;
+    .select {
+        width: 330px;
+        margin-left: 47px;
+    }
+  }
+  .mysubmit_button{
+    transform: translateX(-25px) !important;
+  }
+}

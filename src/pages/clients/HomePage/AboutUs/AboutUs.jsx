@@ -8,7 +8,7 @@ import "animate.css/animate.min.css";
 class AboutUs extends Component {
     render() {
         return (
-            <ScrollAnimation duration={1} animateIn='slideInUp'>
+            <ScrollAnimation duration={1} animateIn='slideInUp' animateOnce={true}>
                 <section className="banner-section spad">
                     <div className="container">
                         <div className="section-title mb-0 pb-2">
