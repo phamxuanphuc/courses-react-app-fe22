@@ -14,10 +14,10 @@ export const NavMenu=[
     {
         id:3,
         name: 'users',
-        href:'admin/users',
+        href:'/dashboard/users',
         icon: 'lni-user'
     },
-    {
+    {   
         id:4,
         name: 'seting',
         href:'admin/seting',

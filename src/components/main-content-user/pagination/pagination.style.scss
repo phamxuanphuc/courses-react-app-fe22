@@ -1,0 +1,32 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i,span{
+        margin: 10px 1px;
+        cursor: pointer;
+    }
+    .current-page{
+        width: 30px;
+        height: 30px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        text-align: center;
+        margin: 0 5px;
+        @include text(15px, white, 500, 0);
+        line-height: 30px;
+    }
+    .next, .prev{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .page-number{
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+
+        }
+    }
+
+}

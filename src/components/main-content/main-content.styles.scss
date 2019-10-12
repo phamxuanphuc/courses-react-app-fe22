@@ -27,7 +27,7 @@
             display: flex;
             list-style: none;
             .link{
-                color:#007bff;
+                color: $color-primary;
                 &:hover{
                     opacity: 0.6;
                 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 const TopNavbar = () => (
-  <nav className="navbar top-navbar">
+  <nav className=" top-navbar">
     <div className="container-fluid navbar-menu">
       <div className="navbar-left">
         <ul className="nav navbar-nav">
