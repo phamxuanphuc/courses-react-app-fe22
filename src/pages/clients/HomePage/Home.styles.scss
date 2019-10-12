@@ -1,0 +1,19 @@
+#myBtn {
+    position: fixed;
+    bottom: 80px;
+    right: -80px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #474747;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: .6s;
+    transform: rotate(-90deg)
+  }
+  
+  #myBtn:hover {
+    background-color: #555;
+  }

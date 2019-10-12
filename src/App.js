@@ -15,14 +15,19 @@ import {
   getCoursesFromApi,
   getCateloriesFromApi
 } from "./redux/reducers/courses/courses.action";
-
-
-
+import { setCurrentUser } from "./redux/reducers/user/user.action";
 
 class App extends React.Component {
+
   componentDidMount() {
     this.props.getCoursesFromApi();
     this.props.getCateloriesFromApi();
+    this.props.setCurrentUser(JSON.parse(localStorage.getItem("user")));
+    const scrollFunction = () => {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    }
+    scrollFunction();
   }
 
   render() {
@@ -46,6 +51,9 @@ const mapDispatchToProps = dispatch => {
     },
     getCateloriesFromApi: () => {
       dispatch(getCateloriesFromApi());
+    },
+    setCurrentUser: (user) => {
+      dispatch(setCurrentUser(user));
     }
   };
 };

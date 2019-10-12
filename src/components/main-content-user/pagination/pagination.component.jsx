@@ -4,7 +4,7 @@ import {
   fetchUsersNext,
   fetchUsersPrev
 } from "../../../redux/reducers/user/user.action";
-import { bindActionCreators } from "../../../../../../../AppData/Local/Microsoft/TypeScript/3.6/node_modules/redux";
+import { bindActionCreators } from "redux";
 
 const PaginationComponent = ({ currentPage, totalPages, ...props }) => {
   const nextPage = page => {

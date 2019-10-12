@@ -7,6 +7,7 @@ import { getCateloriesFromApi } from '../../../../redux/reducers/courses/courses
 import ScrollAnimation from 'react-animate-on-scroll';
 import "animate.css/animate.min.css";
 
+
 class Courses extends Component {
 
     constructor(props) {
@@ -16,6 +17,19 @@ class Courses extends Component {
         }
     }
 
+    componentDidMount() {
+        setTimeout(() => {
+            $(".loader").fadeOut();
+            $("#preloder").delay(400).fadeOut("slow");
+
+            if ($('.course-items-area').length > 0) {
+                let containerEl = document.querySelector('.course-items-area');
+                let mixer = mixitup(containerEl);
+                mixer.show();
+            }
+        }, 500);
+    }
+
     componentDidUpdate() {
         if (this.props.cateloriesSelected !== "") {
             document.getElementById(this.props.cateloriesSelected).click();
@@ -23,7 +37,6 @@ class Courses extends Component {
     }
 
     render() {
-
         // render courses
         const courses = this.props.courses.map((item, index) => {
             return <CoursesItem courses={item} key={index} />
@@ -36,7 +49,7 @@ class Courses extends Component {
 
         return (
 
-            <ScrollAnimation duration={1} animateIn='slideInUp'>
+            <ScrollAnimation duration={1} animateIn='slideInUp' animateOnce={true}>
                 <section className="course-section spad">
                     <div ref={this.props.carRef} className="container">
                         <div className="section-title mb-0">
@@ -67,19 +80,7 @@ const mapStateToprops = (state) => {
     }
 }
 
-$(window).on('load', function () {
 
-    $(".loader").fadeOut();
-    $("#preloder").delay(400).fadeOut("slow");
-
-    if ($('.course-items-area').length > 0) {
-        let containerEl = document.querySelector('.course-items-area');
-        let mixer = mixitup(containerEl);
-        mixer.show();
-
-    }
-
-});
 
 export default connect(mapStateToprops, { getCateloriesFromApi })(Courses);
 

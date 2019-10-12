@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+import {coursesSelected} from '../../../../redux/reducers/courses/courses.action'
 
 class SearchCourses extends Component {
 
@@ -19,7 +20,9 @@ class SearchCourses extends Component {
   }
 
   onSubmit = () => {
-    this.props.history.push(`/courses/${this.state.coursesName}`)
+    this.props.coursesSelected(this.state.coursesName);
+    this.props.history.push(`/home/courses-detail`, this.state.coursesName);
+    window.location.reload(true); 
   }
 
   render() {
@@ -42,21 +45,25 @@ class SearchCourses extends Component {
               <h2><span>Search your course</span></h2>
             </div>
             {/* search form */}
-            <form className="course-search-form my-course-search-form row">
-              <div className="col-md-5">
+            <div className="my_form row">
+
+            <form className="course-search-form my-course-search-form d-flex col-md-9">
+              <div className="select">
                 <select className="site-btn mySelect" type="text" placeholder="Course" value={this.state.coursesName} onChange={this.onChange} name="coursesName">
                   {coursesOption}
                 </select>
               </div>
-              <div className="col-md-5">
+              <div className="select">
                 <select className="site-btn mySelect" type="text" placeholder="Catelories" value={this.state.catelories} onChange={this.onChange} name="catelories">
                   {catelories}
                 </select>
-              </div>
-              <div className="col-md-2">
-                <button onClick={this.onSubmit} className="site-btn btn-dark">Search Couse</button>
-              </div>
+              </div>              
             </form>
+
+            <div className="col-md-3">
+                <button onClick={this.onSubmit} className="site-btn mysubmit_button btn-dark">Search Couse</button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -72,4 +79,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default withRouter(connect(mapStateToProps)(SearchCourses));
+export default withRouter(connect(mapStateToProps, {coursesSelected})(SearchCourses));

@@ -35,3 +35,21 @@ export const getCateloriesFromApi = () => {
         .catch(err => {console.log(err)})
     }
 }
+
+export const getCoursesDetailFromApi = (maKhoaHoc, callBack) => {
+    axios
+    .get(`http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayThongTinKhoaHoc?maKhoaHoc=${maKhoaHoc}`)
+    .then((data) => {
+        callBack(data.data);
+    })
+    .catch(err => {console.log(err.response)})
+}
+
+export const coursesSelected = (maKhoaHoc) => {
+    return(dispatch) => {        
+        dispatch({
+            type: Types.GET_INFOR_COURSES_FROM_API,
+            payload: maKhoaHoc
+        })
+    }
+}

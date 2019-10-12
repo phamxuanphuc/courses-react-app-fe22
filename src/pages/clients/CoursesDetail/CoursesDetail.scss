@@ -1,0 +1,89 @@
+.content {
+  margin: 0;
+  .my_blog-post {
+    margin: 0;
+    .my_blog-metas {
+      border-bottom: 1px solid #e6e6e6;
+    }
+  }
+  .benefit {
+    margin: auto;
+    border: 1px solid #e6e6e6;
+    background-color: #f9f9f9;
+    .title {
+      width: 100%;
+      padding: 15px;
+    }
+  }
+  .courses-content {
+    font-weight: bold;
+    .lesson {
+      cursor: pointer;
+      justify-content: space-between;
+      color: #878787ce;
+      border-bottom: 1px solid #e6e6e6;
+      .title_lesson {
+        i {
+          color: #d82a4e;
+          font-size: 20px;
+        }
+      }
+      .time {
+        i {
+          font-size: 20px;
+        }
+      }
+
+      &:hover {
+        color: #616161;
+      }
+    }
+  }
+}
+.sidebar {
+  .course-item.courses_detail {
+    .my_course-info {
+      .my_course-text {
+        padding: 26px !important;
+        justify-content: space-between;
+        .price {
+          font-size: 30px;
+          font-weight: 700;
+          color: #666;
+        }
+      }
+      .button {
+        padding: 0 20px;
+        .a1 {
+          &:hover {
+            background-color: #df012d;
+          }
+        }
+        .a2 {
+          &:hover {
+            background-color: #92929285;
+          }
+        }
+      }
+      .detail {
+        .detail_item {
+          border-bottom: 1px solid #e6e6e6;
+          .bold {
+            font-weight: bold;
+          }
+          i {
+            float: right;
+            font-size: 30px;
+            font-weight: bold;
+          }
+          &:hover {
+            background-color: #cacaca;
+          }
+        }
+      }
+      &:hover {
+        // box-shadow: -1px 2px 15px -4px rgba(0, 0, 0, 0.75);
+      }
+    }
+  }
+}
