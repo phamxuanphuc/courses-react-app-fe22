@@ -1,9 +1,12 @@
 .sk-folding-cube {
-    top: 40%;
+    top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
     margin: 20px auto;
     width: 40px;
     height: 40px;
     position: relative;
+    z-index: 100;
     -webkit-transform: rotateZ(45deg);
             transform: rotateZ(45deg);
   }

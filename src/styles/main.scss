@@ -36,6 +36,11 @@
 @import "../pages/clients/UserPage/MyCourses/MyCourses.scss";
 @import "../components/main-content-user/main-content.styles.scss";
 @import "../pages/clients/UserPage/Form/Form.scss";
-@import "../pages/clients/CoursesDetail/CoursesDetail.scss"
-
+@import "../pages/clients/CoursesDetail/CoursesDetail.scss";
+.bg-loading{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #d82a4e;
+}
 // @import "../pages/clients/SignupSigninPage/SignupSignin.styles.scss";
