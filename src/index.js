@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
+import { ToastContainer } from 'react-toastify';
+
 
 // Styles
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'react-toastify/dist/ReactToastify.css';
 import './styles/main.scss'
 
 // Redux
@@ -18,6 +21,7 @@ ReactDOM.render(
   <Provider store={store}>
     <BrowserRouter>
       <App />
+      <ToastContainer/>
     </BrowserRouter>
   </Provider>,
 

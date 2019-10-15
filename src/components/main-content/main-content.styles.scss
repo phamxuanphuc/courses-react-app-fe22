@@ -5,6 +5,11 @@
     position: relative;
     margin-top: 62px;
     padding: 0 10px;
+    .col-users{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     .container-fluid {
         width: 100%;
         padding-right: 15px;
@@ -34,5 +39,8 @@
             }
           }
         }
+      }
+      .search-users{
+        
       }
   }

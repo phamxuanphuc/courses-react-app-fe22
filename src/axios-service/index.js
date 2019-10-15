@@ -2,9 +2,7 @@ import axios from "axios";
 
 class Service {
   constructor() {
-    let service = axios.create({
-      headers: { csrf: "token" }
-    });
+    let service = axios.create();
     service.interceptors.response.use(this.handleSuccess, this.handleError);
     this.service = service;
   }
@@ -36,6 +34,14 @@ class Service {
   get(url, params) {
     return this.service
       .get(url, { params: { ...params } })
+      .then(response => response);
+  }
+  delete(url, params, accessToken) {
+    return this.service
+      .delete(url, {
+        params: { ...params },
+        headers: { Authorization: "Bearer " + accessToken }
+      })
       .then(response => response);
   }
 

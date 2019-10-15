@@ -89,16 +89,16 @@ export const fetchUsers=()=>{
     type: userTypes.FETCH_USERS
   }
 };
-export const fetchUsersNext=(page)=>{
+export const fetchUsersNext=(page,search)=>{
   return{
     type: userTypes.FETCH_USERS_NEXT,
-    payload: page
+    payload: {page, search}
   }
 };
-export const fetchUsersPrev=(page)=>{
+export const fetchUsersPrev=(page,search)=>{
   return{
     type: userTypes.FETCH_USERS_PREV,
-    payload: page
+    payload: {page, search}
   }
 };
 export const fetchUsersSuccess=(users)=>{
@@ -110,6 +110,19 @@ export const fetchUsersSuccess=(users)=>{
 export const fetchUsersFailed=(err)=>{
   return{
     type: userTypes.FETCH_USERS_FAILED,
-    padload: err
+    payload: err
   }
 };
+export const searchUsers=(username)=>{
+  return{
+    type: userTypes.SEARCH_USERS,
+    payload: username
+  }
+};
+export const deleteUser=(username, page)=>{
+  return{
+    type: userTypes.DELETE_USERS,
+    payload: {username, page}
+  }
+};
+

@@ -25,6 +25,7 @@
     "react-scripts": "3.1.2",
     "react-scroll-up-button": "^1.6.4",
     "react-slick": "^0.25.2",
+    "react-toastify": "^5.4.0",
     "redux": "^4.0.4",
     "redux-saga": "^1.1.1",
     "redux-thunk": "^2.3.0",

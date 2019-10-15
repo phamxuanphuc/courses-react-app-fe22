@@ -6,22 +6,28 @@ import {
 } from "../../../redux/reducers/user/user.action";
 import { bindActionCreators } from "redux";
 
-const PaginationComponent = ({ currentPage, totalPages, ...props }) => {
-  const nextPage = page => {
-    props.getUsersNext(page);
+const PaginationComponent = ({
+  currentPage,
+  totalPages,
+  searchUser,
+  ...props
+}) => {
+  const nextPage = (page, search) => {
+    console.log(search);
+    props.getUsersNext(page, search);
   };
-  const prevPage = page => {
-    props.getUsersPrev(page);
+  const prevPage = (page, search) => {
+    props.getUsersPrev(page, search);
   };
   return (
     <div className="pagination">
       {currentPage > 1 && (
         <div className="prev">
           <i className="lni-arrow-left" />
-          <span onClick={() => prevPage(currentPage - 1)}>prev</span>
+          <span onClick={() => prevPage(currentPage - 1,searchUser )}>prev</span>
           <span
             className="page-number"
-            onClick={() => prevPage(currentPage - 1)}>
+            onClick={() => prevPage(currentPage - 1,searchUser)}>
             {currentPage - 1}
           </span>
         </div>
@@ -33,10 +39,10 @@ const PaginationComponent = ({ currentPage, totalPages, ...props }) => {
         <div className="next">
           <span
             className="page-number"
-            onClick={() => nextPage(currentPage + 1)}>
+            onClick={() => nextPage(currentPage + 1,searchUser)}>
             {currentPage + 1}
           </span>
-          <span onClick={() => nextPage(currentPage + 1)}>next</span>
+          <span onClick={() => nextPage(currentPage + 1,searchUser)}>next</span>
           <i className="lni-arrow-right" />
         </div>
       )}
@@ -48,6 +54,7 @@ const mapStateToProps = state => {
   return {
     currentPage: state.users.currentPage,
     totalPages: state.users.totalPages,
+    searchUser: state.users.search
   };
 };
 const mapDispatchToProps = dispatch => {

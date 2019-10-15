@@ -1,7 +1,12 @@
 import React from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
 import LetterAvatar from "../../letter-avatar/letter-avatar.component";
 
-const UserItem = ({ hoTen, email, maLoaiNguoiDung, tenLoaiNguoiDung }) => (
+import { deleteUser } from "../../../redux/reducers/user/user.action";
+
+
+const UserItem = ({currentPage,taiKhoan, hoTen, email, maLoaiNguoiDung, tenLoaiNguoiDung, onDeleteUser }) => (
   <tr>
     <td>
       <div>
@@ -26,10 +31,25 @@ const UserItem = ({ hoTen, email, maLoaiNguoiDung, tenLoaiNguoiDung }) => (
       <button type="button" className="btn btn-outline-info btn-sm mr-2">
         <i className="fa fa-edit" />
       </button>
-      <button type="button" className="btn btn btn-outline-danger btn-sm">
+      <button type="button" className="btn btn btn-outline-danger btn-sm" onClick={()=>onDeleteUser(taiKhoan, currentPage )}>
         <i className="fa fa-trash-o" />
       </button>
     </td>
   </tr>
 );
-export default UserItem;
+const mapStateToProps = state=>{
+  return{
+    currentPage: state.users.currentPage
+  }
+};
+const mapDispatchToProps = dispatch => {
+  return {
+    onDeleteUser: bindActionCreators(deleteUser, dispatch)
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(UserItem);
+

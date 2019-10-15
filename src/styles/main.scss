@@ -19,14 +19,15 @@
 @import "../components/left-sidebar/left-sidebar.styles.scss";
 @import "../components/main-content-user/pagination/pagination.style.scss";
 @import "../components/AdminComponent/Loading/loading.styles.scss";
+@import "../components/AdminComponent/Search/search.styles.scss";
+@import "../components/AdminComponent/Modal/modal.styles.scss";
+
 
 // Styles pages
 @import "../pages/clients/HomePage/Home.styles.scss";
 @import "../pages/login-register/LoginRegister.styles.scss";
 @import "../pages/admin/DashboardPage/dash-board.styles.scss";
-
 @import "../components/main-content/main-content.styles.scss";
-
 @import "../pages/clients/HomePage/SearchCourses/SearchCourses.scss";
 @import "../pages/clients/HomePage/HeroSection/HeroSection.scss";
 @import "../pages/clients/HomePage/Courses/CoursesItem/CoursesItem.scss";
@@ -37,5 +38,4 @@
 @import "../components/main-content-user/main-content.styles.scss";
 @import "../pages/clients/UserPage/Form/Form.scss";
 @import "../pages/clients/CoursesDetail/CoursesDetail.scss"
-
 // @import "../pages/clients/SignupSigninPage/SignupSignin.styles.scss";

@@ -1,5 +1,4 @@
 import React from "react";
-
 //Routing
 import { Switch, Route, Redirect } from "react-router";
 
